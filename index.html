@@ -3,75 +3,72 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="pragma" content="no-cache" />
         <title>Društvo Gayatri</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
-
-        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
-        
         <!-- FONT -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-
-      <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <div class="container-fluid">
-          
-          <a class="navbar-brand" href="#">
-            <img src="images/logo_kulski.png" width="80"  class="d-inline-block align-middle mr-2">
-            <span class="title1">Društvo Gayatri</span>
-          </a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNavbar" aria-controls="collapseNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="navbar-collapse collapse" id="collapseNavbar">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#sec-1">Domov</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#sec-3">O nas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#sec-4">Kontakt</a>
-                    </li>
-                </ul>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="images/logo_kulski.png" width="80">
+        </div>
+        <div class="title1">Društvo Gayatri</div>
+        <div class="navbar-links">
+            <a class='link zoom' href="#sec-1">Domov</a>
+            <div class="dropdown link">
+                <button class="dropbtn zoom">Kdo Smo?</button>
+                <div class="dropdown-content">
+                    <a href="pages\shantaya.html">Shantaya Rose</a>
+                    <a href="pages\maksi.html">Maksi Mukunda</a>
+                    <a href="pages\matijas.html">Matijas Slivnik</a>
+                    <a href="pages\sasa.html">Saša Močnik</a>
+                    <a href="pages\tina.html">Tina Medved</a>
+                    <a href="pages\silva.html">Silva-Srebrna Puščica</a>
+                    <a href="pages\mariza.html">Mariza Jukič</a>
+                    <a href="pages\vesna.html">Vesna Slivnik</a>
+                    <a href="pages\mateja.html">Mateja Kragelj</a>
+                    <a href="pages\kevin.html">Kevin Žagar</a>
+                    <a href="pages\doris.html">Doris Kovačič</a>
+                </div>
             </div>
+            <a class='link zoom' href="#sec-4">Kontakt</a>
         </div>
       </nav>
 
         <section id="sec-1">
-            <!-- <div class="test d-flex justify-self-center"> -->
-            <div class="naslovnica container-fluid align-items-sm-center justify-content-center align-self-sm-center">
-              <div class="naslovnaVrsta" id="target">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <h1 class="naslov display-3 text-center">
-                            Dobrodošli na strani Društva za osebno in duhovno rast GAYATRI
-                        </h1>                    
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="besedilo text-center">
-                            <p>V našem društvu smo različni terapevti,<br>predavatelji in poznavalci naravnega in <br>duhovnega zdravljenja.<br>
-                                Imamo različne dogodke,<br>rituale, predavanja, delavnice in terapije.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+          <div class="naslovnica container-fluid align-items-sm-center justify-content-center align-self-sm-center">
+            <div class="naslovnaVrsta" id="target">
+              <div class="row">
+                  <div class="col-sm-12">
+                      <h1 class="naslov display-3 text-center">
+                          Dobrodošli na strani Društva za osebno in duhovno rast GAYATRI
+                      </h1>                    
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12">
+                      <div class="besedilo text-center">
+                          <p>V našem društvu smo različni terapevti,<br>predavatelji in poznavalci naravnega in <br>duhovnega zdravljenja.<br>
+                              Imamo različne dogodke,<br>rituale, predavanja, delavnice in terapije. <br>Prav tako imamo zaprto skupino na Facebooku, <br>imenovano "Zdravilno meditativni večeri", <br>dostopno na naslovu: <br>
+                              <!-- <button class="btn btn-primary" type="button" onclick="window.open('https://www.facebook.com/groups/meditativni.veceri')">Zdravilno meditativni večeri</button> -->
+                              <a href="https://www.facebook.com/groups/438004130708274/">https://www.facebook.com/groups/438004130708274/</a>
+                          </p>
+                      </div>
+                  </div>
               </div>
             </div>
-            <!-- </div> -->
-          </section>
+          </div>
+        </section>
           
         <div class="ozadje">
           <section id="sec-2">
@@ -125,220 +122,33 @@
                 </div> -->
 
             </div> 
-
             <div class="container">
             </div>
-            
           </section>
-          
-          <section id="sec-3">
-            <div class="container-fluid">
-              
-                <div class="row vrsta">
-                  <div class="col-sm-8">
-                    <h2 class="glow" id = "0">Shantaya Rose</h2>
-                        <div id ="0" class="opisOsebe">
-                          Duhovna pot, osebnostni razvoj in intuicija me spremljajo že od rane mladosti. Veliko let dela na sebi, izobraževanja, nabiranje duhovnega znanja in mnoge izkušnje so mi pokazale pot, kako lahko preko različnih tehnik pomagam ljudem do zdravja, ljubezni, osebnostnega zadovoljstva in miru. Predvsem pa, kako začutiti sebe in svoje notranje veselje.<br><br>
-                          Sem <b>terapevtka naravnega zdravljenja, mojstrica in učiteljica Reiki delavnic ter seminarjev, intuitivna svetovalka in regresoterapevtka. Izvajam energetsko čiščenje prostora in vzpostavljanje harmonije v njem. Rada izvajam tudi dušne readinge, Tarot vpoglede in usmeritve ter branje ostalih orakeljskih kart.</b><br><br>
-                          Nudim tudi osebno zaščito, energetsko podporo pri različnih izzivih, lahko tudi na daljavo. Poznam tudi različne svete invokacije in rituale kot so vlivanje svinca, čiščenje energij in karme, izdelava raznih talismanov, odpravljanje urokov in elementalov. Zelo rada se povezujem z materjo Naravo, Devinskim in Angelskim kraljestvom. Blizu so mi tudi Hebrejščina, Kriya joga in Kundalini energija.<br><br>
-                          Dosedanje izkušnje sem si pridobivala pri terapevtki naravnega zdravljenja Bebi Splichal, duhovnemu učitelju in predavatelju ezoterike v misterični šoli, škofu gnostične cerkve, Aristidu Havličku-Tiliju in nenazadnje tudi pri Amazonskih Indijancih, ašramih, templjih, šoli jogi in teozofije.<br><br>
-                          Kar lahko sanjate, lahko tudi uresničite (Walt Disney).
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                      <div class="slika">
-                        <img src="images/osebe/oseba3.png" alt="oseba3" class="oseba3 slikca">
-                      </div>
-                    </div>
-                </div>
-                
-                <div class="row vrsta">
-                  <div class="col-sm-8">
-                    <h2 class="glow" id = "1">Maksi Mukunda</h2>
-                    <div id ="1" class="opisOsebe">
-                      Vsi smo del zemlje in zemlja je del nas. Vsi sodimo v isto družino. Tkanina življenja, ki nas je ustvarila, je ena sama. Vsi sobivamo in vse je v ravnovesju. Energija, ki se pretaka, je čudovita in njena moč je neskončna. Vedno sem čutil in vedno sem vedel, da obstaja še nekaj več kot le to, kar vidimo, slišimo, otipamo ali zavohamo. Pot me je vodila v svet energij “Reiki”, v svet narave, v odkrivanje njenih energij in njene moči, preko športa pa tudi v iskanje skrajnih zmožnosti človeškega duha in telesa.<br><br>
-                      Sem <b>mojster Reikija, regresije, hoje po žerjavici, intuicije zaznavanja prostora in časa sedmih dimenzij, čiščenja urokov in energij s telesa, duše in prostora. Izvajam stik z onstranstvom, energijske slike telesa in podpora, terapije ter vpogled v Tarot ter usmeritve.</b><br><br>
-                      Svoje življenjske izkušnje s področja poznavanja energij človeka in športa z velikim veseljem delim z vami, da skupaj najdemo želeno pot.<br><br>
-                      "Modrost prihaja v sanjah. Ko nehaš sanjati - nehaš živeti." Neznani indijanski poglavar
-                    </div>
-                  </div>
-                  <div class="col-sm-4 order-lg-first">
-                    <img src="images/osebe/oseba4.png" alt="oseba4" class="oseba4 slikca">
-                  </div>
-                </div>
-
-                <div class="row vrsta">
-                  <div class="col-sm-8">
-                      <h2 class="glow" id = "2">Matijas Slivnik</h2>
-                      <div id ="2" class="opisOsebe">
-                        Sem Matijas Slivnik, <B>diplomirani naturopat in iridolog,</B> že od malih nog pa tudi velik ljubitelj narave in športne rekreacije ter glasbenik.<br><br>
-                        Vse to me je in me še vedno navdihuje ter mi daje posebno vibracijo, ki jo počasi in vztrajno dojemam z raziskovanjem in tudi delom na sebi, ter sedaj že desetletje nudenjem pomoči in terapevtski podpori drugim.<br><br>
-                        Zaključen imam mednarodno certificirani študijski program smeri Naturopatija. Po končanem študiju pa sem se udeležil tudi dodatnih izobraževanj in prakse iz Klinične Naturopatije, ter se dopolnjeval z znanji tudi iz tujine (Anglija, Češka, Italija). Znanja konstantno tudi nadgrajujem ter se izobražujem z različnih področjih preventivne oskrbe iz naravne medicine, zdravljenja ter prehrane.<br><br>
-                        Trenutno sem v procesu certificiranja s področja dietetike - Dieta GIFT (Accademia di Medicina di Segnale, Italija), pod vodstvom italijanskega zdravnika in prehranskega strokovnjaka dr. med. Luca Specianija.<br><br>
-                        Dodatne kvalifikacije: Terapevt manualne metode naravnega zdravljenja VITO, certificirani energoterapevt (Tehnike Brennan Healing Science® iz šole dr. med. Suzane Landripet), športni maser ter član Združenja naturopatov Slovenije.
-                      </div>
-                  </div>
-                  <div class="col-sm-4 order-lg-last">
-                      <img src="images/osebe/oseba5.png" alt="oseba5" class="oseba5 slikca">
-                  </div>
-                </div>
-
-                <div class="row vrsta">
-                  <div class="col-sm-8">
-                    <h2 class="glow" id = "3">Saša Močnik</h2>
-                    <div id ="3" class="opisOsebe">
-                      Kdo sem? Sem kot ti, popotnica skozi življenje. Sem pot, ki me orisuje in preko katere se izražam skozi številne vloge svoje biti. Sem ženska, mama, partnerica, prijateljica, ustvarjalka in potepinka, sem ljubiteljica lepega in naravnega. Rada imam potepanja in potovanja vseh oblik in dolžin, ljubim dobre knjige in trenutke preživete v družbi toplih ljudi. Ljubim svojega otroka in družino, ki je moj pristan in hkrati neprecenljivi dar največjih spoznanj, učenj ter spreminjanj same sebe.  Del sebe sem našla tudi v jogi, ki je skupaj z  integralno meditacijo že dolgo nepogrešljiv del moje dnevne rutine in tudi pot k notranji stabilnosti. Umetnost, ustvarjanje, risanje in fotografija pa so moja večna tiha strast in je nemalokrat tesno povezana z naravo, ki jo obožujem v vseh njenih oblikah.V naravi ter njenih zakonitostih se namreč skrivajo odgovori na mnoga naša vprašanja, saj smo z njo in njenimi ritmi neločljivo povezani. <br><br>
-                      <B>DJOTIŠ</B> je več kot 5000 let stara modrost o času in naravnih ritmih, zapisana v Vedah. Znanje, ki razodeva povezanost človeka in Vesolja nam preko prepoznavanja planetarnih vzorcev v trenutku našega rojstva ponuja dragocene namige za razumevanje našega življenjskega potovanja in nas samih.  Čeprav nam omogoča prepoznavati preteklost, dogajanje v sedanjosti in vidi v prihodnost, napovedovanje oziroma 'prerokovanje' ni njen namen. Beseda djotiš pomeni "svetloba" in je čudovito orodje, pomoč, ki osvetljuje naše videnje in nam pomaga razumeti, kako pod vplivom svobodne volje, z usmerjenim delovanjem in s sprejemanjem boljših odločitev pozitivno spreminjamo svojo sedanjost ter si kreiramo lepšo prihodnost. Sočasno pa nam pomaga razumeti razliko med stvarmi, ki jih lahko spreminjamo in stvarmi, ki jih je potrebno sprejeti, saj je majhen del našega življenja določen vnaprej. <br><br>
-                      <b>VASTU</b> je tako kot djotiš del starodavnega vedskega znanja. Je arhitektura, ki se ravna po smernicah narave in nas usmerja kako urediti naše bivalno okolje, delovni prostor ali vrt, da bodo v skladu z naravnimi zakonitostmi, s petimi elementi, naravnimi silami ter našimi individualnimi potrebami ter značilnostmi. Namen vsega tega je, da se ustvari potrebna harmonija in pravilen pretok življenjske energije, kar posledično spodbuja zdravje, vitalnost, blaginjo, poveča našo ustvarjalnost, izboljša odnose… Včasih so dovolj že drobne korekcije, ki pomagajo odpreti vrata želenim spremembam.<br><br>
-                      Če te kliče želja po pozitivni spremembi, mi lahko pišeš ali pokličeš. Ne morem ti je pričarati, lahko pa ti pokažem pot, da si jo ustvariš sam.<br><br>
-                      Kamor usmerjam svojo pozornost, to živim, to sem jaz. (Buddha)
-                    </div>
-                  </div>
-                  <div class="col-sm-4 order-lg-first">
-                    <img src="images/osebe/oseba1.jpg" alt="oseba1" class="oseba1 slikca">
-                  </div>
-                </div>
-
-                <div class="row vrsta">
-                  <div class="col-sm-8">
-                      <h2 class="glow" id = "4">Tina Medved</h2>
-                      <div id ="4" class="opisOsebe">
-                        Ljubim Življenje in našo Mati Zemljo. Narava mi vedno da vse kar potrebujem. Zavetje, varnost, razumevanje in sprejemanje take kakršna sem. Naučila me je opazovati in slišati tiste preproste stvari na katere smo ljudje skorajda že pozabili.<br><br>
-                        Zaljubljena sem v <b>energije Run</b>, v energije planetov in Astrologijo. Vse to uporabljam pri svojih energijskih terapijah, ki jim dodajam še znanje preprostih šamanskih tehnik, znanje in razumevanje Svete Geometrije in Geomantije v okviru staroverstva in svetih krajev.<br><br>
-                        Z veseljem ponudim podporo in pomoč, če si boste tega kdaj zaželeli in začutili, da bi se radi povezali z menoj.<br><br>
-                        Objem, Tina.
-                      </div>
-                  </div>
-                  <div class="col-sm-4">
-                      <img src="images/osebe/oseba7.png" alt="oseba7" class="oseba7 slikca">
-                  </div>
-                </div>
-
-                <div class="row vrsta">
-                  <div class="col-sm-8">
-                    <h2 class="glow" id = "5">Silva-Srebrna Puščica</h2>
-                    <div id ="5" class="opisOsebe">
-                      Sem Silva - Srebrna Puščica, poznana kot <b>tolmačka živalskih sporočil</b>.<br><br>
-                      Starodavni šamani so že tisočletja nazaj vedeli, da živali niso zgolj člen v ekosistemu, ampak so v njihovo naravo zapisani vsi večni in nespremenljivi duhovni zakoni, ki človeku pomagajo na poti duhovne rasti. Vsaka žival prinaša sporočilo in nobene ne srečamo po naključju, pa naj bo v naravi ali kakorkoli drugače.<br><br>
-                      Ko z mano sedite na šamanskem readingu, se vam, kot energijskemu bitju, vedno odslikajo tiste živali, ki so najboljši približek vašega trenutnega energijskega stanja. Pomagam vam, da pridete v trenutek tukaj in zdaj, kjer se ta stik sploh lahko zgodi, vsebina redinga pa je odvisna od vaših vprašanj in narave živalskih vodnikov, ki so tedaj z nama.<br><br>
-                      Delam z lastnimi živalskimi kartami in sporočila razlagam na najbolj preprosto možen način. Moja posebna strast je tudi tematika "pot duše dvojčice", skozi katero prav tako razbijam tabuje, da ne gre za iskanje ljubezni, ampak da se duša dvojčica z nami uskladi sama od sebe, ko na prvo mesto postavimo osebne vrednote in življenjsko vizijo, za katero bi si prizadevali v vsakem primeru.<br><br>
-                      Za reading ali posvet mi lahko pišete na gozdna.zenska@gmail.com. Najraje delam v živo in se veselim vašega obiska (lahko pridete sami ali v dvoje), v primeru skupine pa vas lahko obiščem tudi jaz. Ko sporočila razlagam v krogu, igra vlogo energija skupine in je vsako sporočilo tako za dotičnega posameznika kot za tistega, ki se ga določene besede dotaknejo.<br><br>
-                      Niste sami. Stvarstvo Vas Živi!
-                    </div>
-                  </div>
-                  <div class="col-sm-4 order-lg-first">
-                    <img src="images/osebe/oseba6.png" alt="oseba6" class="oseba6 slikca">
-                  </div>
-                </div>
-
-                <div class="row vrsta">
-                  <div class="col-sm-8">
-                    <h2 class="glow" id = "6">Mariza Jukič</h2>
-                      <div id ="6" class="opisOsebe">
-                        Že kot zelo mlada sem bila iskalka.Zanimalo me je vse kar je bilo drugačno od povprečja, pa naj so bili to ljudje, knjige, dogodki. Povprečje me je dolgočasilo.<br><br>
-                        Pred več kot 30 leti sem začela z Reikijem.<br>
-                        Kmalu zatem sem srečala svojega učitelja, velikega humanitarca in mirovnika Sri Sri Ravi Shankarja.
-                        Njegova ideja, vizija, da bi bil svet brez stresa, nasilja in kot ena velika družina, vse to me je zelo pritegnilo in začela sem slediti njegovemu učenju. V vseh teh letih sem pod okriljem Art of Living organizacije, pridobila veliko znanja, izkušenj in različnih veščin.<br><br>
-                        Postala sem učiteljica programov kot so <b>joga, dihalne tehnike, intuitivni vpogledi</b>, za različne ciljne skupine. Seminarje sem delala s šolniki, starši otrok, Kralji ulice, splošno populacijo, največ pa sem delala z otroci v šolah in sicer delavnice 'Nenasilje v šoli'. Podajam znanje, katerega otroci še kako potrebujejo in se ga v učnih načrtih pogreša.<br><br>
-                        Zadnja leta delam na opolnomočenju žensk. Z znanjem, ki ga pridobijo na naših srečanjih, si ženske lahko pomagajo premagovati raznovrstne tegobe, izzive v vsakdanjem življenju.<br><br>
-                        Nudim tudi <b>energetsko podporo in blessinge</b>, za katere sem bila inicirana od svojega učitelja. Blessingi odsevajo v naših življenjih notranji mir in prikličejo več blagoslovov.<br>
-                        Blizu mi je tudi svet čarovnije, magije in vse kar je očem nevidno.<br>
-                        Rada pogledam v orakeljske karte, preko katerih vam z veseljem predam sporočila.<br><br>
-                        In seveda, da ne pozabim na globoko povezanost z Mati Zemljo in rituale, katere sem pridobila na raznih šamanskih potovanjih.
-                      </div>
-                  </div>
-                  <div class="col-sm-4">
-                      <img src="images/osebe/oseba2.jpg" alt="oseba2" class="oseba2 slikca">
-                  </div>
-                </div>
-
-                <!-- <div class="row vrsta">
-                  <div class="col-sm-8">
-                    <h2 class="glow" id = "7">David Kragelj</h2>
-                    <div id ="7" class="opisOsebe">
-                      Sem David Kragelj, človek vesele narave in pozitivnega duha.
-                      Obožujem šport, ples in potovanja po različnih kontinentih, zelo blizu sta mi tudi svet Reikija in meditacije.
-                      Pri iskanju samega sebe in svojega višjega jaza, sem se najbolj našel Naravi. 
-                      Tam se lahko v celoti poglobim vase in raziskujem svoje še neodkrite potenciale. 
-                      
-                      Narava nam nudi še veliko več kot si morda mislimo, če se ji le znamo na pravi način približati. 
-                      Na svoji življenjski poti mi je bilo dano, da sem se soočil z naravno medicino, katera nam lahko pomaga pri odkrivanju svojih potencialov. 
-                      Prepričan sem, da če nas naravna medicina pokliče je oseba pripravljena iti v novo spoznanje, v globino samega sebe. 
-                      Marsikdo ima zaradi težke življenjske zgodbe predebel ''zid'', da bi ga lahko sam porušil in prav s tem namenom rastejo te čudežne rastline na našem planetu Zemlja. 
-                      Ko se mi je porodila želja, da se soočim z naravno medicino, sem se čutil podprtega in izkušnjo sprejel, da je namen v moje najvišje dobro. 
-                      Tako sem se podal v svet odkrivanja, raziskovanja ter preučevanja <b>Svetih rastlin</b> in spoznal, da je to moje čudovito poslanstvo, ki me navdihuje, izpolnjuje in seveda osrečuje.
-                      Moje najlepše izkustvo pa je bilo to, ko sem začutil, kako se lahko moč medicine in moč svetih rastlin, integrirajo v naša življenja kar nam omogočajo, da gremo ''čez'' sebe in pustimo staro življenje za sabo.
-                      
-                      Z veseljem sem pripravljen deliti izkušnje z vami in svetovati kaj v povezavi z <b>naravno medicino</b>.
-                    </div>
-                  </div>
-                  <div class="col-sm-4 order-lg-first">
-                    <img src="images/osebe/oseba8.jpg" alt="oseba8" class="oseba8 slikca">
-                  </div>
-                </div> -->
-
-                <div class="row vrsta">
-                  <div class="col-sm-8">
-                    <h2 class="glow" id = "8">Vesna Slivnik</h2>
-                    <div id ="8" class="opisOsebe">
-                      Od nekdaj se je v mojih mislih porajalo nešteto vprašanj, vseskozi sem se soočala z raziskovalnim duhom, verjela v mističnost.<br>Neka nevidna sila me je vedno znova spodbujala in usmerjala. Sledila sem poti. Moja empatičnost do ljudi se je izkazovala vse skozi. Skrb za šibkejše, občutek do vseh živih bitij, želja po harmoniji, razumevanju in pristnih odnosih v ožji družini in širše so sestavljali moj mozaik. S pomočjo širjenja znanja, globjih vpogledov, obiskovanja raznih izobraževanj se je moje obzorje nenehno širilo in bogatilo. Izkušnje pa so osebno rast dodatno začinile.<br>Pot me je pripelja do Reiki energij in z radostjo in hvaležnostjo sem ta mistični žarek spustila skozi kanal, da je le ta dosegel tistega, ki si je to želel.<br>Še z marsičem sem se srečala, a naj omenim tehniko <b>Access Bars</b>, ki je nežna tehnika, kjer z dotikom 32 točk na glavi možgani po 15 minutah terapije preidejo v theta stanje, kar pomeni stanje globoke relaksacije, ki aktivira samozdravljenje telesa in odpira prostor zavedanja v našem življenju. Dogaja se razelektritev in na ta način se sprostijo vse energije, ki so ujete v možganih in telesu. Življenje mi je ponudilo pridobiti znanje zemeljske frekvence, ki izredno blagodejno deluje na naše možgane. Ko smo povezani s to frekvenco dosežemo naravni pulz naše DNK. Ta terapija lahko popolnoma odpravi stres iz našega telesa, pospeši miselne procese, spomin, koncentracijo in močno okrepi naše zavedanje. Najnovejše medicinske raziskave potrjujejo, da se naše telo zdravi samo in da z načinom razmišljanja vplivamo na svoje celice, zdravje in življenje. Nešteto možnosti je, s katerimi lahko povečamo našo učinkovitost, produktivnost, zavzetost, notranje zadovoljstvo in srečo. Z veseljem dodam svoj prispevek tistemu, ki ga pokliče, saj imam vse podprto in tudi uradno certificirano ;).<br>Nikoli ni prava zgolj ena in edina stvar, ampak vse to je skupek veličine, globine in širine. Vredno je raziskovati in odkrivati, še lepše pa pomagati in opazovati čarobnost sprememb in srečnih obrazov. <br><br>Objem vsem :)<br>Vesna
-                    </div>
-                  </div>
-                  <div class="col-sm-4 order-lg-first">
-                    <img src="images/osebe/oseba9.jpeg" alt="oseba9" class="oseba9 slikca">
-                  </div>
-                </div>
-
-                <!-- <div class="row vrsta">
-                  <div class="col-sm-8">
-                    <h2 class="glow" id = "8">Vesna Slivnik</h2>
-                      <div id ="8" class="opisOsebe">
-                        Od nekdaj se je v mojih mislih porajalo nešteto vprašanj, vseskozi sem se soočala z raziskovalnim duhom, verjela v mističnost.<br>Neka nevidna sila me je vedno znova spodbujala in usmerjala. Sledila sem poti. Moja empatičnost do ljudi se je izkazovala vse skozi. Skrb za šibkejše, občutek do vseh živih bitij, želja po harmoniji, razumevanju in pristnih odnosih v ožji družini in širše so sestavljali moj mozaik. S pomočjo širjenja znanja, globjih vpogledov, obiskovanja raznih izobraževanj se je moje obzorje nenehno širilo in bogatilo. Izkušnje pa so osebno rast dodatno začinile.<br>Pot me je pripelja do Reiki energij in z radostjo in hvaležnostjo sem ta mistični žarek spustila skozi kanal, da je le ta dosegel tistega, ki si je to želel.<br>Še z marsičem sem se srečala, a naj omenim tehniko <b>Access Bars</b>, ki je nežna tehnika, kjer z dotikom 32 točk na glavi možgani po 15 minutah terapije preidejo v theta stanje, kar pomeni stanje globoke relaksacije, ki aktivira samozdravljenje telesa in odpira prostor zavedanja v našem življenju. Dogaja se razelektritev in na ta način se sprostijo vse energije, ki so ujete v možganih in telesu. Življenje mi je ponudilo pridobiti znanje zemeljske frekvence, ki izredno blagodejno deluje na naše možgane. Ko smo povezani s to frekvenco dosežemo naravni pulz naše DNK. Ta terapija lahko popolnoma odpravi stres iz našega telesa, pospeši miselne procese, spomin, koncentracijo in močno okrepi naše zavedanje. Najnovejše medicinske raziskave potrjujejo, da se naše telo zdravi samo in da z načinom razmišljanja vplivamo na svoje celice, zdravje in življenje. Nešteto možnosti je, s katerimi lahko povečamo našo učinkovitost, produktivnost, zavzetost, notranje zadovoljstvo in srečo. Z veseljem dodam svoj prispevek tistemu, ki ga pokliče, saj imam vse podprto in tudi uradno certificirano ;).<br>Nikoli ni prava zgolj ena in edina stvar, ampak vse to je skupek veličine, globine in širine. Vredno je raziskovati in odkrivati, še lepše pa pomagati in opazovati čarobnost sprememb in srečnih obrazov. <br><br>Objem vsem :)<br>Vesna
-                      </div>
-                  </div>
-                  <div class="col-sm-4">
-                      <img src="images/osebe/oseba9.jpeg" alt="oseba9" class="oseba9 slikca">
-                  </div>
-                </div> -->
-            </div>
-          </div>
-          </section>
-
+        </div>
           <section id="sec-4">
             <div class="container-fluid">
               <div class="row footer">
-                <div class="col-sm-6">
-                  <div class="kontakt" id="kontakt1">
+                <div class="col-sm-6 column">
+                  <div class="kontakt">
                     <h3>SHANTAYA ROSE</h3>
                     <p>Telefonska številka: 051 427 252<br>
                       E-pošta: shantaya.rose10@gmail.com</p>
                   </div>
-                  <div class="kontakt" id="kontakt2">
-                      <h3>MAKSI-MUKUNDA</h3>
-                      <p>Telefonska številka: 031 735 188<br>
-                        E-pošta: urma888@gmail.com</p>
-                  </div>
-                  <div class="kontakt" id="kontakt3">
-                      <h3>MATIJAS SLIVNIK</h3>
-                      <p>Telefonska številka: 051 320 065</p>
-                  </div>
-                  <div class="kontakt" id="kontakt4">
-                      <h3>SILVA - SREBRNA PUŠČICA</h3>
-                      <p>E-pošta: gozdna.zenska@gmail.com</p>
-                  </div>
-                  <div class="kontakt" id="kontakt5">
-                      <h3>SAŠA MOČNIK</h3>
-                      <p>Telefonska številka: 041 646 240<br>E-pošta: sasa.orris@gmail.com</p>
-                  </div>
                 </div>
-                  <div class="col-sm-6">
-                    <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=13.700551986694338%2C46.18095954565428%2C13.7554407119751%2C46.20814100021748&amp;layer=mapnik&amp;marker=46.19455195346911%2C13.727996349334717" class="zemljevid"></iframe>
-                  </div>
+                <div class="col-sm-6 zemljevid" id="mapWrap"></div>
               </div>
             </div>
           </section>
-          
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="app.js"></script>
+          <!-- Include Leaflet JavaScript -->
+          <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+          <script>
+              // Your Leaflet map initialization code goes here
+          </script>
+
+          <!-- Include Bootstrap JavaScript -->
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+          <!-- Include your custom JavaScript -->
+          <script src="./app.js"></script>
     </body>
-    </html>
+</html>

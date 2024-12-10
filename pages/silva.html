@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Silva-Srebrna Puščica</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- FONT -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="..\styles.css">
+
+        <!-- Leaflet CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    </head>
+    <body>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="../images/logo_kulski.png" width="80">
+        </div>
+        <div class="title1">Društvo Gayatri</div>
+        <div class="navbar-links">
+            <a class='link zoom' href="../index.html#sec-1">Domov</a>
+            <div class="dropdown link">
+                <button class="dropbtn zoom">Kdo Smo?</button>
+                <div class="dropdown-content">
+                    <a href="./shantaya.html">Shantaya Rose</a>
+                    <a href="./maksi.html">Maksi Mukunda</a>
+                    <a href="./matijas.html">Matijas Slivnik</a>
+                    <a href="./sasa.html">Saša Močnik</a>
+                    <a href="./tina.html">Tina Medved</a>
+                    <a href="./silva.html">Silva-Srebrna Puščica</a>
+                    <a href="./mariza.html">Mariza Jukič</a>
+                    <a href="./vesna.html">Vesna Slivnik</a>
+                    <a href="./mateja.html">Mateja Kragelj</a>
+                    <a href="./doris.html">Doris Kovačič</a>
+                </div>
+            </div>
+            <a class='link zoom' href="#sec-4">Kontakt</a>
+        </div>
+      </nav>
+
+      <section id="sec-3">
+        <div class="row vrsta">
+          <h2 class="titleOsebe" id = "0">Silva-Srebrna Puščica</h2>
+              <div class="col-sm-8 opisOsebe" id ="0">
+                Sem Silva - Srebrna Puščica, poznana kot <b>tolmačka živalskih sporočil</b>.<br><br>
+                Starodavni šamani so že tisočletja nazaj vedeli, da živali niso zgolj člen v ekosistemu, ampak so v njihovo naravo zapisani vsi večni in nespremenljivi duhovni zakoni, ki človeku pomagajo na poti duhovne rasti. Vsaka žival prinaša sporočilo in nobene ne srečamo po naključju, pa naj bo v naravi ali kakorkoli drugače.<br><br>
+                Ko z mano sedite na šamanskem readingu, se vam, kot energijskemu bitju, vedno odslikajo tiste živali, ki so najboljši približek vašega trenutnega energijskega stanja. Pomagam vam, da pridete v trenutek tukaj in zdaj, kjer se ta stik sploh lahko zgodi, vsebina redinga pa je odvisna od vaših vprašanj in narave živalskih vodnikov, ki so tedaj z nama.<br><br>
+                Delam z lastnimi živalskimi kartami in sporočila razlagam na najbolj preprosto možen način. Moja posebna strast je tudi tematika "pot duše dvojčice", skozi katero prav tako razbijam tabuje, da ne gre za iskanje ljubezni, ampak da se duša dvojčica z nami uskladi sama od sebe, ko na prvo mesto postavimo osebne vrednote in življenjsko vizijo, za katero bi si prizadevali v vsakem primeru.<br><br>
+                Za reading ali posvet mi lahko pišete na gozdna.zenska@gmail.com. Najraje delam v živo in se veselim vašega obiska (lahko pridete sami ali v dvoje), v primeru skupine pa vas lahko obiščem tudi jaz. Ko sporočila razlagam v krogu, igra vlogo energija skupine in je vsako sporočilo tako za dotičnega posameznika kot za tistega, ki se ga določene besede dotaknejo.<br><br>
+                Niste sami. Stvarstvo Vas Živi!
+              </div>
+          <div class="col-sm-4">
+              <img src="..\images\osebe\oseba6.png" alt="oseba6" class="velika slikca">
+          </div>
+        </div>
+      </section>
+      <div class="prehod">
+      </div>
+      <section id="sec-4">
+        <div class="container-fluid">
+          <div class="row footer">
+            <div class="col-sm-6 kontakt">
+              <!-- <div class="kontakt"> -->
+                <div>
+                  <h3>SILVA - SREBRNA PUŠČICA</h3>
+                    E-pošta: gozdna.zenska@gmail.com</p>
+                </div>
+              <!-- </div> -->
+            </div>
+            <div class="col-sm-6">
+              <div class="zemljevid" id="mapWrap"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Include Leaflet JavaScript -->
+      <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+      <script>
+          // Your Leaflet map initialization code goes here
+      </script>
+
+      <!-- Include Bootstrap JavaScript -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+      <!-- Include your custom JavaScript -->
+      <script src="..\app.js"></script>
+    </body>
+</html>
