@@ -1,0 +1,406 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* =============================== NAVBAR ================================= */
+
+.navbar {
+    margin: 0 0 0 0;
+    width: 100%;
+    /* padding-left: 2%;
+    padding-right: 2%; */
+    background-image: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.26)), url('images/ozadje.webp');
+    background-size: 30% auto;
+    z-index: 100;
+}
+
+@media all and (max-device-width: 480px){
+    .navbar {
+        background-size: 100% auto;
+    }
+}
+
+.title1 {
+    font-size: 30px;
+    text-align: center;
+    opacity: 1;
+    font-weight: 600;
+    
+    text-shadow: 3px 4px 2px rgba(0, 0, 0, 0.171);
+    background-image: linear-gradient(45deg, #13335c, #2673d8);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
+@media all and (max-device-width: 480px){
+    .title1 {
+        font-size: larger;
+    }
+}
+
+.nav-link {
+    transition: all .3s ease-in-out;
+    margin-left: 5vw;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.nav-link:hover {
+    transform: scale(1.5);
+}
+
+@media all and (max-device-width: 480px){
+    .nav-link {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+/* ============================= SECTION: 1 ======================================= */
+
+.section {
+    width: 100%;
+    
+}
+
+.ozadje {
+    background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url('images/ozadje.webp');
+    background-size: 30% auto;
+    z-index: 100;
+    min-height: 100vh;
+}
+
+@media all and (max-device-width: 480px){
+    .ozadje {
+        background-size: 90% auto;
+    }
+}
+
+#sec-1 {
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.4) 1%, rgba(35, 33, 40, 0.85) 90%), url('images/naslovna.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 150%;
+    background-size: cover;
+
+    z-index: -1;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+
+    /* height: 150vw; */
+    /* padding-top: 10%;
+    padding-bottom: 22%; */
+    /* margin-bottom: 5%; */
+}
+
+@media all and (max-device-width: 480px){
+    #sec-1 {
+        height: 200;
+    }
+    .naslovnica {
+        padding: none;
+    }
+}
+
+.naslovnica {
+    padding-top: 15%;
+    padding-bottom: 30%;
+}
+
+.naslovnaVrsta {
+    opacity: 1;
+    transition: all .3s ease-in-out;
+}
+
+.naslov {
+    background-image: radial-gradient(circle, #dbdbdb, #ffffff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: white;
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.901));
+    margin-bottom: 3%;
+    font-size: 65px;
+    font-weight: 500;
+}
+
+.besedilo {
+    color: white;
+    font-size: 24px;
+    font-weight: 390;
+    /* line-height: 135%; */
+    filter: drop-shadow(0 0 2px rgb(255, 255, 255));
+}
+
+@media all and (max-device-width: 540px) {
+    .naslov {
+        margin-bottom: 10%;
+        font-size: 30px;
+    }
+
+    .besedilo {
+        font-size: 14px;
+    }
+}
+
+/* ============================= SECTION: 2 ======================================= */
+
+#sec-2 {
+    padding-top: 40px;
+    /* overflow: hidden; */
+    /* background-image: url('images/ozadje.webp');
+    background-size: 30% auto;
+    z-index: 10;
+    min-height: 100vh; */
+}
+
+.carousel {
+    justify-content: center;
+    width: 40vw;
+    height: auto;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0px 50px 170px rgba(0,0,0,0.7), 0px 10px 10px rgba(0,0,0,0.2);
+}
+
+@media all and (max-device-width: 540px){
+    .carousel {
+        width: 90vw;
+    }
+}
+
+/* ============================== SECTION: 3 ====================================== */
+
+#sec-3 {
+    /* background-image: url('images/ozadje.webp');
+    background-size: 30% auto;
+    z-index: 10;
+    min-height: 100vh; */
+    box-shadow: 0px 65px 70px rgba(0,0,0,0.3), 0px 10px 10px rgba(0,0,0,0.1);
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.vrsta {
+    padding: 5% 5%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    /* height: 500px; */
+    /* margin: 2%; */
+    /* margin-top: 6%; */
+    /* margin-bottom: 6%; */
+}
+
+.col-sm-8 {
+    padding-left: 4%;
+    padding-right: 4%;
+    /* padding: 3%; */
+}
+
+h2 {
+    font-size: 45px;
+}
+
+
+@media all and (max-device-width: 480px){
+    h2 {
+        font-size: 30px;
+    }
+
+    .opisOsebe {
+        font-size: 15px;
+    }
+}
+
+/* ======================= MOZNA FUNKCJIA GLOW EFEKTA NA H2 ============================ */
+/* .glow {
+    -webkit-animation: glow 1.5s ease-in-out infinite alternate;
+    -moz-animation: glow 1.5s ease-in-out infinite alternate;
+    animation: glow 1.5s ease-in-out infinite alternate;
+  }
+  
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 40px #3196da, 0 0 30px #81cdff7e;
+    }
+    to {
+        text-shadow: 0 0 12px #94d4ff, 0 0 20px rgba(28, 81, 228, 0.781);
+    }
+} */
+
+        h2 {
+            /* transform: translate(0, -50%); */
+            text-align: center;
+            margin: 8px;
+            /* transition: opacity 0.5s; */
+            opacity: 1;
+            transition: all .3s ease-in-out;
+            font-weight: 600;
+            visibility: visible;
+            
+            /* text-shadow: 3px 4px 2px rgba(0, 0, 0, 0.377); */
+            background-image: linear-gradient(45deg, #13335c, #2673d8);
+            background-size: 100%;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            -moz-text-fill-color: transparent;
+        }
+
+        .clicked {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        h2:hover {
+            cursor: pointer;
+            transform: scale(1.3);
+        }
+
+.opisOsebe {   
+    font-size: 21px;
+    text-align: center;
+    display: block;
+    padding-bottom: 1.5%;
+
+    -webkit-transition: opacity 0.8s;
+    -moz-transition: opacity 0.8s;     
+    transition: opacity 0.8s;  
+    transition: opacity 1s ease-out;
+
+    opacity: 0;
+    height: 0;
+    /* transition: height 1s; */
+    overflow: hidden;
+
+    overflow: auto;
+    visibility: hidden;
+    /* white-space: pre-wrap; */
+}
+
+.activeBesedilo {
+    opacity: 1;
+    visibility: visible;
+    /* height: auto; */
+    
+    height: 300px;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+}
+
+.col-sm-4 {
+    height: 100%;
+    /* overflow: hidden; */
+}
+
+
+.slikca {
+    /* object-fit: contain; */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    box-shadow: 0px 50px 70px rgba(0,0,0,0.4), 0px 10px 10px rgba(0,0,0,0.1);
+    width: 100%;
+    height: auto;
+}
+
+
+/* ============================== SECTION: 4 ====================================== */
+
+#sec-4 {
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(to top, #09203f 0%, #537895 100%);
+    z-index: -100;
+
+    /* position: absolute;
+    top: 1000px;
+    position: -webkit-sticky;
+    position: sticky; */
+}
+
+.col-sm-6 {
+    text-align: center;
+    justify-content: center;
+    display: inline-block;
+}
+
+.footer {
+    padding: 2%;
+}
+
+.kontakt {
+    margin: 8%;
+    /* color: rgba(245, 245, 245, 0.979); */
+    text-shadow: -3px 0 black, 0 3px black, 1px 0 black, 0 -1px black;
+
+    background-image: radial-gradient(circle, #dbdbdb, #ffffff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: white;
+    /* filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.63)); */
+}
+
+.kontakt p {
+    font-size: 18px;
+}
+
+.kontakt h3 {
+    font-size: 26px;
+}
+
+
+.zemljevid {
+    justify-self: center;
+    align-items: center;
+    justify-self: center;
+    box-shadow: 0px 50px 70px rgba(0,0,0,0.3),
+              0px 10px 10px rgba(0,0,0,0.1);
+    width: 100%;
+    min-height: 40vw;
+    /* height: auto; */
+    border-radius: 10px;
+    border: 1px solid black;
+    /* overflow: hidden; */
+}
+
+@media all and (max-device-width: 480px){
+    .zemljevid {
+        width: 80vw;
+        min-height: 100vw;
+    }
+
+    .kontakt {
+        margin-top: 12%;
+        margin-bottom: 12%;
+    }
+
+    .kontakt p {
+        font-size: 16px;
+    }
+
+    .kontakt h3 {
+        font-size: 22px;
+    }
+}
