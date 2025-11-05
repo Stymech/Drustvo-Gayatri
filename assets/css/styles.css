@@ -1,0 +1,306 @@
+/* ===========================
+   Gayatri â€” global variables
+   =========================== */
+:root{
+  --bg: #0b1220;
+  --bg-soft: #0e1830;
+  --card: #111a33;
+  --text: #e9eefb;
+  --muted: #a9b5d1;
+  --accent: #5aa0ff;
+  --accent-2: #7ad1d3;
+  --radius: 16px;
+  --shadow: 0 8px 30px rgba(0,0,0,.25);
+  --nav-h: 64px;
+
+  /* Carousel: allow full image, never crop */
+  --carousel-max-h: 70vh; /* desktop/tablet default */
+}
+
+/* ==============
+   Base / reset
+   ============== */
+* { box-sizing: border-box; }
+html, body { margin:0; padding:0; }
+img { display:block; max-width:100%; height:auto; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+body {
+  font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background:#0a0f1e;
+  color:var(--text);
+  line-height:1.5;
+  overflow-x: hidden;
+}
+.container { width:min(1100px, 92%); margin-inline:auto; }
+
+/* =======================
+   Header / Navigation bar
+   ======================= */
+.site-nav{
+  position:fixed;
+  inset:0 auto auto 0;
+  width:100%;
+  height:var(--nav-h);
+  z-index:50;
+  backdrop-filter: blur(8px);
+  background: linear-gradient(180deg, rgba(10,15,30,0.80), rgba(10,15,30,0.45));
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.nav-inner{
+  height:var(--nav-h);
+  display:flex; align-items:center; gap:1rem;
+}
+.brand{
+  display:flex; align-items:center; gap:.6rem;
+  text-decoration:none; color:var(--text); font-weight:700;
+}
+.brand img{ height:52px; width:auto; }
+.brand span{ letter-spacing:.2px; display:none; } /* logo alone */
+
+.menu{
+  margin-left:auto;
+  display:flex; align-items:center; gap:1rem;
+  list-style:none; padding:0; margin-block:0;
+}
+.menu a{
+  color:var(--text);
+  font-weight:600;
+  padding:.5rem .6rem;
+  border-radius:10px;
+}
+.menu a:hover{ background: rgba(255,255,255,.06); text-decoration:none; }
+
+.nav-toggle{
+  margin-left:auto; display:none;
+  background:none; border:0; cursor:pointer;
+}
+.nav-toggle .bar{
+  display:block; width:22px; height:2px; background:var(--text);
+  margin:5px 0; border-radius:2px;
+}
+
+/* Mobile nav */
+@media (max-width: 900px){
+  .nav-toggle{ display:block; }
+  .menu{
+    position:absolute; left:0; right:0; top:100%;
+    display:none; flex-direction:column; gap:.2rem;
+    background: linear-gradient(180deg, rgba(10,15,30,.55), rgba(10,15,30,.35));
+    backdrop-filter: blur(8px);
+    border-bottom:1px solid rgba(255,255,255,.06);
+    padding:.6rem 0 .8rem;
+  }
+  .menu.open{ display:flex; }
+  .menu a{ display:block; text-align:center; font-size:1.1rem; padding:.7rem 1rem; }
+}
+
+/* ==========================
+   Hero (fullscreen on home)
+   ========================== */
+.hero{
+  position:relative;
+  min-height:100vh;
+  padding-top:var(--nav-h);
+  display:grid; place-items:center;
+  overflow:hidden;
+}
+.hero-bg{
+  position:absolute; inset:0; width:100%; height:100%;
+  object-fit:cover;
+  filter:saturate(1.05) contrast(1.05) brightness(.8);
+  z-index:0;
+}
+.hero-overlay{
+  position:absolute; inset:0; z-index:1;
+  background:
+    radial-gradient(1200px 600px at 70% 0%, rgba(90,160,255,.35), transparent 60%),
+    linear-gradient(180deg, rgba(10,15,30,.60), rgba(10,15,30,.95) 70%);
+}
+.hero-inner{
+  position:relative; z-index:2; text-align:center; padding: 6rem 0;
+}
+.hero h1{
+  font-size: clamp(2rem, 2.3vw + 1.4rem, 3rem);
+  line-height:1.15; margin:0 0 1rem;
+}
+.hero p{
+  color: var(--muted);
+  font-size: clamp(1rem, .6vw + .9rem, 1.1rem);
+  margin: 0 0 1.6rem;
+}
+.btn{
+  display:inline-block;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color:#071326; font-weight:800; padding:.8rem 1.1rem;
+  border-radius:999px; box-shadow: var(--shadow);
+}
+.btn:hover{ filter: brightness(1.05); text-decoration:none; }
+
+/* =============
+   Sections
+   ============= */
+.section{ padding: clamp(2rem, 5vw, 4rem) 0; }
+/* First section on non-home pages needs space below fixed header */
+body:not(.home) .section:first-of-type{ padding-top: calc(var(--nav-h) + 1.2rem); }
+
+/* ==========================
+   Carousel â€” show full image
+   ========================== */
+.carousel{
+  position:relative;
+  overflow:hidden;              /* hide slide edges during transitions */
+  background:transparent;       /* let pattern show around photos */
+  border-radius: var(--radius);
+  box-shadow:none;              /* no border/halo */
+  width: 100%;
+  margin: 0 auto;               /* center the carousel */
+  max-width: 100%;              /* ensure no overflow */
+  display: block;               /* ensure block-level centering */
+  /* height is auto; slides will size themselves by image */
+}
+
+.carousel-track{
+  display:flex;
+  align-items:center;           /* vertically center images if heights differ */
+  width: 100%;
+  transition: transform .5s ease;
+}
+
+.slide{
+  flex:0 0 100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:0;                    /* clean edges */
+  min-width: 100%;              /* ensure full width */
+  background:transparent;
+}
+
+/* Never crop. Fit image within a responsive max height. */
+.slide img{
+  max-height: var(--carousel-max-h);
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  object-fit: contain;          /* guarantee no cropping */
+  border-radius: inherit;       /* match rounded container */
+}
+
+/* Mobile: reduce max height so full image fits on screen */
+@media (max-width: 900px){
+  :root{ --carousel-max-h: 58vh; }
+}
+@media (max-width: 600px){
+  :root{ --carousel-max-h: 52vh; }
+}
+
+.carousel-prev, .carousel-next{
+  position:absolute; top:50%; transform: translateY(-50%);
+  background: rgba(0,0,0,.4); color:#fff; border:0;
+  width:44px; height:44px; border-radius:50%;
+  display:grid; place-items:center; cursor:pointer;
+}
+.carousel-prev{ left:.6rem; } .carousel-next{ right:.6rem; }
+.carousel-prev:hover, .carousel-next:hover{ background: rgba(0,0,0,.6); }
+
+/* =========================
+   Contact band + map card
+   ========================= */
+.contact-band{
+  background: linear-gradient(180deg, #0a1326, #0b1220);
+  padding: clamp(2.5rem, 5vw, 4.5rem) 0;
+  border-top:1px solid rgba(255,255,255,.06);
+}
+.contact-grid{
+  display:grid; grid-template-columns: 1.1fr 1fr;
+  gap: clamp(1rem, 3vw, 2rem); align-items: stretch;
+}
+@media (max-width: 900px){ .contact-grid{ grid-template-columns:1fr; } }
+
+.contact-card, .map-card{
+  background: var(--card);
+  border:1px solid rgba(255,255,255,.06);
+  border-radius: var(--radius);
+  padding: clamp(1rem, 2.5vw, 1.6rem);
+  box-shadow: var(--shadow);
+}
+#mapWrap{
+  width:100%; height:320px;
+  border-radius:12px; overflow:hidden;
+}
+
+/* ============
+   People grid
+   ============ */
+.people-toolbar{ margin: 1rem 0 1.2rem; }
+
+.input{
+  width:100%; padding:.75rem .9rem; border-radius:12px;
+  border:1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.04);
+  color:var(--text);
+}
+.input::placeholder{ color:var(--muted); }
+
+.people-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr));
+  gap: clamp(.8rem, 2vw, 1.2rem);
+  padding-top: .6rem; /* keep cards off the header a bit */
+}
+.person-card{
+  background: var(--card);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius: var(--radius);
+  overflow:hidden; box-shadow: var(--shadow);
+}
+.person-card img{ width:100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.card-body{ padding:.8rem .9rem; }
+.card-body h3{ margin: 0 0 .25rem; font-size:1.05rem; }
+.muted{ color:var(--muted); font-size:.95rem; }
+.card-link{ display:block; color:inherit; text-decoration:none; }
+.card-link:hover .card-body h3{ text-decoration: underline; }
+
+/* =========
+   Person
+   ========= */
+.person-grid{
+  display:grid; grid-template-columns: 1.2fr .8fr;
+  gap: clamp(1rem, 3vw, 2rem); align-items:center;
+}
+@media (max-width: 900px){ .person-grid{ grid-template-columns:1fr; } }
+.person-title{ font-size: clamp(1.8rem, 2.2vw + 1.2rem, 3rem); margin:.3rem 0 1rem; }
+.person-text p{ color:var(--muted); font-size:clamp(.98rem, .4vw + .95rem, 1.1rem); line-height:1.6; }
+.person-photo img{ border-radius:var(--radius); box-shadow: var(--shadow); }
+
+/* =======
+   Footer
+   ======= */
+.site-footer{ border-top:1px solid rgba(255,255,255,.06); background:#0a0f1e; }
+.footer-inner{ padding:1.2rem 0; text-align:center; color:var(--muted); }
+
+/* ===========
+   Focus rings
+   =========== */
+:where(a,button){ outline:none; }
+:where(a,button):focus-visible{
+  outline:3px solid var(--accent); outline-offset:2px; border-radius:10px;
+}
+
+/* ==================
+   Background pattern
+   ================== */
+:root{
+  --pattern-img: url("../../assets/img/background.webp");
+  --pattern-size: 480px auto;
+}
+body.patterned{
+  background:
+    var(--pattern-img) repeat,
+    #0a0f1e;
+  background-size: var(--pattern-size), auto;
+}
+
+/* Narrower person contact band */
+.contact-band.is-person .container{ max-width:760px; }

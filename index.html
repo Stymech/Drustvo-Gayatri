@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="sl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Društvo Gayatri</title>
+  <meta name="description" content="DruÅ¡tvo za osebno in duhovno rast Gayatri." />
+  <link rel="icon" type="image/png" href="assets/img/logo.png" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body class="home patterned">
+  <div data-include="partials/header.html"></div>
+
+  <!-- HERO (full viewport) -->
+  <header id="home" class="hero">
+    <div class="container hero-inner">
+      <h1>Dobrodošli na strani Društva za osebno in duhovno rast GAYATRI</h1>
+      <p>
+        V našem društvu smo različni terapevti,<br>
+        predavatelji in poznavalci naravnega in<br>
+        duhovnega zdravljenja.<br>
+        Imamo različne dogodke,<br>
+        rituale, predavanja, delavnice in terapije.<br>
+        Prav tako imamo Facebook skupino:<br>
+        <a href="https://www.facebook.com/groups/438004130708274/" target="_blank" rel="noopener noreferrer">
+          Zdravilno meditativni večeri, začinjeni z iskrico čarovnije.
+        </a>
+      </p>
+      <a class="btn" href="#gallery">Oglej si utrinke</a>
+    </div>
+    <img class="hero-bg" src="assets/img/hero.webp" alt="" decoding="async" fetchpriority="high" />
+    <div class="hero-overlay"></div>
+  </header>
+
+  <!-- GALLERY / CAROUSEL -->
+  <section id="gallery" class="section">
+    <div class="container">
+      <div class="carousel" aria-label="Gallery">
+        <div class="carousel-track">
+          <div class="slide"><img src="assets/img/slideshow/0.webp" alt="Utrinek 0" loading="eager" /></div>
+          <div class="slide"><img src="assets/img/slideshow/1.webp" alt="Utrinek 1" loading="lazy" /></div>
+          <div class="slide"><img src="assets/img/slideshow/2.webp" alt="Utrinek 2" loading="lazy" /></div>
+          <div class="slide"><img src="assets/img/slideshow/3.webp" alt="Utrinek 3" loading="lazy" /></div>
+          <div class="slide"><img src="assets/img/slideshow/4.webp" alt="Utrinek 4" loading="lazy" /></div>
+          <div class="slide"><img src="assets/img/slideshow/5.webp" alt="Utrinek 5" loading="lazy" /></div>
+          <div class="slide"><img src="assets/img/slideshow/6.webp" alt="Utrinek 6" loading="lazy" /></div>
+        </div>
+        <button class="carousel-prev" aria-label="Previous slide">‹</button>
+        <button class="carousel-next" aria-label="Next slide">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact-band">
+    <div class="container contact-grid">
+      <div class="contact-card">
+        <h2>Kontakt</h2>
+        <h3>Shantaya Rose</h3>
+        <p>Telefon: <a href="tel:+38651427252">051 427 252</a><br>
+           E-pošta: <a href="mailto:shantaya.rose10@gmail.com">shantaya.rose10@gmail.com</a></p>
+        <p>
+          FB skupina:<br>
+          <a href="https://www.facebook.com/groups/438004130708274/" target="_blank" rel="noopener noreferrer">
+            Zdravilno meditativni večeri, začinjeni z iskrico čarovnije.
+          </a>
+        </p>
+      </div>
+      <div class="map-card">
+        <div id="mapWrap"
+             data-lat="46.19455195346911"
+             data-lng="13.727996349334717"
+             data-label="Zatolmin 59, 5220 Tolmin"></div>
+      </div>
+    </div>
+  </section>
+
+  <div data-include="partials/footer.html"></div>
+  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script defer src="assets/js/app.js"></script>
+</body>
+</html>
